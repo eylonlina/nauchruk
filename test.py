@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import db
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,6 +12,7 @@ def about():
 
 @app.route('/user/<username>')
 def userpage(username):
-    return render_template("userpage.html", username=username)
+    user_data = db.get_user(username)
+    return render_template("userpage.html", user=user_data)
 
 app.run(port=5000)
