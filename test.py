@@ -10,8 +10,7 @@ def about():
     return render_template("about.html")
 
 @app.route('/user/<username>')
-def show_user_profile(username):
-    # show the user profile for that user
-    return 'User %s' % username
+def userpage(username):
+    return render_template("userpage.html", username=username)
 
 app.run(port=5000)

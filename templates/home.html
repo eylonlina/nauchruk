@@ -2,10 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>ГЛАВНАЯ</title>
   </head>
   <body>
     <h1>HAUCHRUK TYT!</h1>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ url_for('static', filename='musa.jpg') }}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
     <h2><a href="https://github.com/dstsimokha/nauchruk">Ссылка на наш репозиторий</a></h2>
     <h2><a href="{{ url_for('about') }}">Про наш проект</a></h2>
   </body>
