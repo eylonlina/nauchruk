@@ -7,13 +7,11 @@
   </head>
   <body>
     <h1>HAUCHRUK TYT!</h1>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="{{ url_for('static', filename='musa.jpg') }}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Mouse&BeardOff</h5>
-        <p class="card-text">Wants to sleep</p>
-        <a href="https://www.hse.ru/staff/ilya.musabirov" class="btn btn-primary">Page on HSE site</a>
-      </div>
+    <div class="container">
+        <form class="form" method="get" action="/search">
+            <input type="search" name="query" class="form-control">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
     </div>
     <h2><a href="https://github.com/dstsimokha/nauchruk">Ссылка на наш репозиторий</a></h2>
     <h2><a href="{{ url_for('about') }}">Про наш проект</a></h2>
